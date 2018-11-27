@@ -12,21 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-"""Trains LSTM text classification model.
 
-Model trains with adversarial or virtual adversarial training.
-
-Computational time:
-  1.8 hours to train 10000 steps without adversarial or virtual adversarial
-    training, on 1 layer 1024 hidden units LSTM, 256 embeddings, 400 truncated
-    BP, 64 minibatch and on single GPU (Pascal Titan X, cuDNNv5).
-
-  4 hours to train 10000 steps with adversarial or virtual adversarial
-    training, with above condition.
-
-To initialize embedding and LSTM cell weights from a pretrained model, set
-FLAGS.pretrained_model_dir to the pretrained model's checkpoint directory.
-"""
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
