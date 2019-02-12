@@ -127,23 +127,7 @@ def virtual_adversarial_loss(logits, embedded, mask, inputs,
 
 def adversarial_dropout_loss(logits, embedded, mask, inputs,
                              logits_from_embedding_fn):
-  """Virtual adversarial loss.
-
-  Computes virtual adversarial perturbation by finite difference method and
-  power iteration, adds it to the embedding, and computes the KL divergence
-  between the new logits and the original logits.
-
-  Args:
-    logits: 3-D float Tensor, [batch_size, num_timesteps, m], where m=1 if
-      num_classes=2, otherwise m=num_classes.
-    embedded: 3-D float Tensor, [batch_size, num_timesteps, embedding_dim].
-    inputs: VatxtInput.
-    logits_from_embedding_fn: callable that takes embeddings and returns
-      classifier logits.
-
-  Returns:
-    kl: float scalar.
-  """
+  
   # Stop gradient of logits. See https://arxiv.org/abs/1507.00677 for details.
   #logits = tf.stop_gradient(logits)
 
@@ -179,23 +163,7 @@ def adversarial_dropout_loss(logits, embedded, mask, inputs,
 
 def iterative_adversarial_dropout_loss(logits, embedded, mask, inputs,
                              logits_from_embedding_fn):
-  """Virtual adversarial loss.
-
-  Computes virtual adversarial perturbation by finite difference method and
-  power iteration, adds it to the embedding, and computes the KL divergence
-  between the new logits and the original logits.
-
-  Args:
-    logits: 3-D float Tensor, [batch_size, num_timesteps, m], where m=1 if
-      num_classes=2, otherwise m=num_classes.
-    embedded: 3-D float Tensor, [batch_size, num_timesteps, embedding_dim].
-    inputs: VatxtInput.
-    logits_from_embedding_fn: callable that takes embeddings and returns
-      classifier logits.
-
-  Returns:
-    kl: float scalar.
-  """
+  
   # Stop gradient of logits. See https://arxiv.org/abs/1507.00677 for details.
   #logits = tf.stop_gradient(logits)
 
