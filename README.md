@@ -1,2 +1,8 @@
 # adversarial_dropout_text_classification
-The code will be available soon.
+
+Tensorflow implementation in the paper "Adversarial Dropout for Reccurent Neural Networks"
+
+## Requirements
+
+
+## Implementation command
